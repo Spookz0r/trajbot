@@ -20,20 +20,20 @@
 \usepackage[english]{babel}    % Language
 \usepackage[square,numbers]{natbib}     %Nice numbered citations
 \bibliographystyle{plainnat}            %Sorted bibliography
-
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{{fig/}}
 
 
 \begin{document}               % Begins the document
 
 \title{Homework 3 in EL2450 Hybrid and Embedded Control Systems}
 \author{
-  First name1 Last name1 \\ person number \\ email 
+  Alexander Ramm \\ 931005 \\ aleram@kth.se 
   \and 
-  First name2 Last name2 \\ person number \\ email
+  Filip Stenbeck \\ 930702 \\ fstenb@kth.se
   \and
-  First name3 Last name3 \\ person number \\ email
-  \and
-  First name4 Last name4 \\ person number \\ email
+  Gabriel Andersson Santiago \\ 910706 \\ gabras@kth.se
   \and
   }
 %\date{2010-10-10}             % If you want to set the date yourself.
@@ -100,27 +100,64 @@ Here are some examples how to use Latex:
 
 \section*{Task 1}
 
-Solution to the task
+\begin{equation}
+u_r = \frac{2^{u_{\omega} + u_{\psi}}}{2} = u_w + \frac{u_{Psi}}{2}
+\end{equation}
+\begin{equation}
+u_l = u_\omega - \frac{u_\Psi}{2}
+\end{equation}
 
 \section*{Task 2}
 
-Solution to the task
+By calculating the mean value of $\dot{x}$ from the data in \emph{Forward.cvs} \emph{R} could be estimated with equation \eqref{xdot}
+\begin{equation}
+\dot{x} = R*u_\omega*cos(\theta) \label{xdot}
+\end{equation}
+\\
+By calculating the mean value of $\dot{\theta}$ from the data in \emph{Rotate.cvs} \emph{L} could be estimated with equation \eqref{thetadot}
+\begin{equation}
+\dot{\theta} = \frac{R}{L}u_\Psi\label{thetadot}
+\end{equation}
+\\
+The estimated values are
+\begin{center}
+	\begin{tabular}{| c | c |}
+	\hline
+	R & L \\ \hline
+	111 & 111 \\ \hline
+	
+	\end{tabular}
+\end{center}
 
 \section*{Task 3}
 
-Solution to the task
+$\dot{\theta} = R/L u_\psi$ won't be asymptotically stable due there is no condition without an input signal. It will not have Zeno behaviour due there is no finite time limit. The system will continuously oscillate around zero.
+
+$\dot{\theta} = R/L u_\psi$ will be asymptotically stable due to no limitations on the input signal. SKRIV NÅGOT
 
 \section*{Task 4}
 
-Solution to the task
+The system is asymptotically stable due to we can let the hold time go to zero which is not possible in real life. SKRIV OM ZENON
+
 
 \section*{Task 5}
 
-Solution to the task
-
+The system is stable but not asymptotically stable due to the use of a controller with a zero-order hold. The continuously oscillatory behaviour indicates that there is no Zeno behaviour.
 \section*{Task 6}
 
-Solution to the task
+The discretized system can be seen in Equations \eqref{dXdot},\eqref{dYdot} and\eqref{dPdot}
+\begin{equation}
+\frac{z-1}{T_s} x[k] = Ru_\omega[k] cos(\theta[k])\label{dXdot}
+\end{equation}
+
+\begin{equation}
+\frac{z-1}{T_s} y[k] = Ru_\omega[k] sin(\theta[k]) \label{dYdot}
+\end{equation}
+
+\begin{equation}
+\frac{z-1}{T_s} \theta[k] = \frac{R}{L}u_\Psi[k]\label{dPdot}
+\end{equation}
+
 
 \section*{Task 7}
 
