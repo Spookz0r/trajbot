@@ -1,1 +1,0 @@
-theta =(theta - theta_true)*K

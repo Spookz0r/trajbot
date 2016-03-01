@@ -165,27 +165,60 @@ Solution to the task
 
 \section*{Task 8}
 
-Solution to the task
+It is not possible to reach the goal angle due to we only have a proportional controller and therefore always have a small static error.
 
+K = 0.7*L/R
+\begin{figure}[H]
+\begin{center}	
+  \includegraphics[width = 0.8\textwidth]{task8.png}
+ \end{center}
+\end{figure}
 \section*{Task 9}
+With euler forward method we have that
+\begin{equation*}
+\theta[h]\approx \theta[k]+\dot{\theta}[k]\tau_s
+\end{equation*}
+We have $\dot{\theta}$ from equation (3) and control signal $u_\Psi$ in the assignment. This give the following equation for the system.
+\begin{equation*}
+\theta[k+h]\approx  \frac{R K_\Psi \tau_s(\theta^R-\theta[k])}{L}+\theta[k]
+\end{equation*}
 
-Solution to the task
-
+\begin{equation*}
+\theta[k+h]\approx  (1-\frac{R K_\Psi \tau_s)}{L})\theta[k]+\frac{R K_\Psi \tau_s)}{L}\theta^R
+\end{equation*}
+This is stable i the absolute value of the eigenvalues are less than 1 for the $\Phi$ matrix. The eigenvalue is
+\begin{equation*}
+\lambda = |1-\frac{R K_\Psi \tau_s)}{L}|<1
+\end{equation*}
+This gives the the upper/lower boundary of $0<K_\Psi<\frac{2L}{R\tau_s}$.
 \section*{Task 10}
-
-Solution to the task
+K = 5
+In the general case no due to the direction of the robot is not lined up with the point it wants to go to. 
+\begin{figure}[H]
+\begin{center}	
+  \includegraphics[width = 0.8\textwidth]{task10.png}
+ \end{center}
+\end{figure}
 
 \section*{Task 11}
 
-Solution to the task
+\begin{figure}[H]
+\begin{center}	
+  \includegraphics[width = 0.8\textwidth]{task11.png}
+ \end{center}
+\end{figure}
 
 \section*{Task 12}
 
 Solution to the task
 
 \section*{Task 13}
-
-Solution to the task
+K = 30
+\begin{figure}[H]
+\begin{center}	
+  \includegraphics[width = 0.8\textwidth]{task13.png}
+ \end{center}
+\end{figure}
 
 \section*{Task 14}
 

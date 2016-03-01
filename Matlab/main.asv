@@ -1,0 +1,28 @@
+%% Task 2
+
+close all; clear all; clc;
+
+% Forward and Rotates first row is removed to be able to read. Probably not
+% relevant.  %[t, x, y, theta]
+indata = dlmread('Forward.cvs', ';');
+forward_t = indata(:,1); % time
+forward_x = indata(:,2);
+forward_y = indata(:,3);
+forward_theta = indata(:,4);
+
+indata = dlmread('Rotate.cvs', ';');
+rotate_t = indata(:,1);
+rotate_x = indata(:,2);
+rotate_y = indata(:,3);
+rotate_theta = indata(:,4);
+clear indata;
+
+% Forward case :
+% Calculate xdot through discrete derivate
+uw = 200;
+up = 0;
+
+
+t1 = 0;
+x1 = 0;
+for i = 1:length(forward_t)

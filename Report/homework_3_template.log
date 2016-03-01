@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  25 FEB 2016 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  29 FEB 2016 11:47
 entering extended mode
 **homework_3_template.tex
 (homework_3_template.tex
@@ -281,31 +281,58 @@ File: Phase_portrait_with_regionmark.pdf Graphic file (type pdf)
 Package pdftex.def Info: Phase_portrait_with_regionmark.pdf used on input line 
 83.
 (pdftex.def)             Requested size: 362.37569pt x 266.56393pt.
- [2 <./Phase_portrait_with_regionmark.pdf>] [3] [4] [5] (homework_3_template.au
-x) ) 
+ [2 <./Phase_portrait_with_regionmark.pdf>] [3] <fig/task8.png, id=35, 526.9687
+5pt x 395.22656pt>
+File: fig/task8.png Graphic file (type png)
+ <use fig/task8.png>
+Package pdftex.def Info: fig/task8.png used on input line 173.
+(pdftex.def)             Requested size: 362.37569pt x 271.79597pt.
+
+<fig/task10.png, id=36, 526.96875pt x 395.22656pt>
+File: fig/task10.png Graphic file (type png)
+ <use fig/task10.png>
+Package pdftex.def Info: fig/task10.png used on input line 199.
+(pdftex.def)             Requested size: 362.37569pt x 271.79597pt.
+
+[4 <./fig/task8.png (PNG copy)>]
+<fig/task11.png, id=40, 526.96875pt x 395.22656pt>
+File: fig/task11.png Graphic file (type png)
+ <use fig/task11.png>
+Package pdftex.def Info: fig/task11.png used on input line 207.
+(pdftex.def)             Requested size: 362.37569pt x 271.79597pt.
+
+[5 <./fig/task10.png (PNG copy)> <./fig/task11.png (PNG copy)>]
+<fig/task13.png, id=44, 526.96875pt x 395.22656pt>
+File: fig/task13.png Graphic file (type png)
+ <use fig/task13.png>
+Package pdftex.def Info: fig/task13.png used on input line 219.
+(pdftex.def)             Requested size: 362.37569pt x 271.79597pt.
+
+[6 <./fig/task13.png (PNG copy)>] [7] (homework_3_template.aux) ) 
 Here is how much of TeX's memory you used:
- 3408 strings out of 493673
- 44355 string characters out of 3141524
+ 3431 strings out of 493673
+ 44708 string characters out of 3141524
  116785 words of memory out of 3000000
- 6712 multiletter control sequences out of 15000+200000
+ 6729 multiletter control sequences out of 15000+200000
  12964 words of font info for 50 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,9n,28p,379b,233s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on homework_3_template.pdf (5 pages, 167971 bytes).
+ 27i,9n,28p,379b,267s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmtt12.pfb>
+Output written on homework_3_template.pdf (7 pages, 236290 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
+ 91 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
