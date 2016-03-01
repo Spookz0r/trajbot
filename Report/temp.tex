@@ -1,0 +1,25 @@
+\begin{align*}
+	$Q = {Rotate,Line,Wait}$\\
+	$X = \mathbb{R}^3$\\
+	$Init = (Rotation,(x0,y0,\theta0)$
+	\\
+	$f(Rotation,(x,y,\theta)) = (Ru_\omega*cos(\theta),Ru_\omega*sin(\theta),\frac{R}{L}u_\Psi)$\\
+	$f(Line,(x,y,\theta)) = (Ru_\omega*cos(\theta),Ru_\omega*sin(\theta),\frac{R}{L}u_\Psi)$\\
+	$f(Wait,(x,y,\theta)) = (0,0,0)$\\
+	\\
+	$D(Rotation) = {x,y,\theta \epsilon \mathbb{R}, -180 < \theta <= 180}$\\
+	$D(Line) = {x,y,\theta \epsilon \mathbb{R}, -180 < \theta <= 180}$\\
+	$D(Wait) = {x,y,\theta \epsilon \mathbb{R}, -180 < \theta <= 180}$\\
+	\\
+	$E = { (Rotation,line),(Line,Wait),(Line,Rotation),(Wait,Rotation)}$\\
+	\\
+	$G(Rotation, Line) = {x,y,\theta \epsilon \mathbb{R}: \abs{\theta^R - \theta} < a, \abs{x0 - x} < b, \abs{y0 -y} < c}$\\
+	$G(Line, Rotation) = {x,y,\theta \epsilon \mathbb{R}: \abs{xg - x} < d, \abs{yg -y} < e}$\\
+	\\
+	$R((Rotation, Line), (x,y,\theta \epsilon \mathbb{R})) 
+	= R((Line, Wait), (x,y,\theta \epsilon \mathbb{R})) 
+	= R((Line, Rotation), (x,y,\theta \epsilon \mathbb{R})) 
+	= R((Wait, Rotation), (x,y,\theta \epsilon \mathbb{R}))
+	= {x,y,\theta \epsilon \mathbb{R}}$\\
+	
+\end{align*}
