@@ -35,6 +35,7 @@
   \and
   Gabriel Andersson Santiago \\ 910706 \\ gabras@kth.se
   \and
+  Anders Levin
   }
 %\date{2010-10-10}             % If you want to set the date yourself.
 
@@ -131,18 +132,17 @@ The estimated values are
 
 \section*{Task 3}
 
-$\dot{\theta} = R/L u_\psi$ won't be asymptotically stable due there is no condition without an input signal. It will not have Zeno behaviour due there is no finite time limit. The system will continuously oscillate around zero.
+$\dot{\theta} = R/L u_\psi$ won't be asymptotically stable due to that the output signal will oscillate with constant amplitude after a set time. It will not have Zeno behaviour due there is no finite time limit when the ouutput signal is stable. 
 
-$\dot{\theta} = R/L u_\psi$ will be asymptotically stable due to no limitations on the input signal. SKRIV NÅGOT
 
 \section*{Task 4}
 
-The system is asymptotically stable due to we can let the hold time go to zero which is not possible in real life. SKRIV OM ZENON
+The system is asymptotically stable due to that the output signal will constantly converge to the desired value. Though by doing this will quicker and quicker reactions from the controller which will not be possible in real life. The system does not exhibit Zeno behaviour since the control signal will always have a value and it does not stabilize within a finite time. 
 
 
 \section*{Task 5}
 
-The system is stable but not asymptotically stable due to the use of a controller with a zero-order hold. The continuously oscillatory behaviour indicates that there is no Zeno behaviour.
+The system is stable but not asymptotically stable and therefore does also not exhibit Zeno behaviour. We see that the system is not asymptotically stable due to that the output signal does not converge to the desired value but will oscillate with a constant amplitude after infinite time.
 \section*{Task 6}
 
 The discretized system can be seen in Equations \eqref{dXdot},\eqref{dYdot} and\eqref{dPdot}
@@ -161,19 +161,6 @@ The discretized system can be seen in Equations \eqref{dXdot},\eqref{dYdot} and\
 
 \section*{Task 7}
 
-Solution to the task
-
-\section*{Task 8}
-
-It is not possible to reach the goal angle due to we only have a proportional controller and therefore always have a small static error.
-
-K = 0.7*L/R
-\begin{figure}[H]
-\begin{center}	
-  \includegraphics[width = 0.8\textwidth]{task8.png}
- \end{center}
-\end{figure}
-\section*{Task 9}
 With euler forward method we have that
 \begin{equation*}
 \theta[h]\approx \theta[k]+\dot{\theta}[k]\tau_s
@@ -190,7 +177,44 @@ This is stable i the absolute value of the eigenvalues are less than 1 for the $
 \begin{equation*}
 \lambda = |1-\frac{R K_\Psi \tau_s)}{L}|<1
 \end{equation*}
-This gives the the upper/lower boundary of $0<K_\Psi<\frac{2L}{R\tau_s}$.
+This gives the the upper/lower boundary of $0<K_\Psi<\frac{2L}{R\tau_s}$. 
+
+\section*{Task 8}
+
+It is not possible to reach the goal angle due to we only have a proportional controller and therefore always have a small static error.
+
+K = 0.7*L/R
+\begin{figure}[H]
+\begin{center}	
+  \includegraphics[width = 0.8\textwidth]{task8.png}
+ \end{center}
+\end{figure}
+\section*{Task 9}
+With euler forward method we have that for the x variable
+\begin{equation*}
+x[h]\approx x[k]+\dot{x}[k]\tau_s
+\end{equation*}
+We have $\dot{x}$ from equation (3) and control signal $u_\omega$.
+\begin{equation*}
+u_\omega [k] = K_{\omega} cos(\theta [k])(x_0 - x[k])+K_{\omega}sin(\theta [k]) (y_0-y[k])
+\end{equation*}
+\begin{equation*}
+\dot{x[k]} = R u_\omega [k] cos(\theta[k])
+\end{equation*}
+\begin{equation*}
+x[k+h]\approx  (1-K_\omega\tau_sRcos^2(\theta[k]))x[k]+K_1+\Gamma y[k]
+\end{equation*}
+Where $K_1$ a constant of how $x[k+h]$ depends on $x_0, y_0$ and $\Gamma$ is how it depends on the position i y direction $y[k]$. Assuming that $y[k]$ could be considered as an input signal we have stability if the absolute value of the eigenvalues in the stability equation is less than $1$.
+\begin{equation*}
+|\lambda |=|1-K_\omega\tau_sRcos^2(\theta[k])|<1
+\end{equation*}
+This gives the the upper/lower boundary of $0<K_\omega<\frac{2}{R\tau_s}$ since the minumum upper boundary is found when $cos^2(\theta[k])=1$.\\\\
+If the controller is analysed in the y direction the following eigenvalues are obtained.
+\begin{equation*}
+|\lambda |=|1-K_\omega\tau_sRsin^2(\theta[k])|<1
+\end{equation*} And since the maximum of $sin^2(\theta[k])=cos^2(\theta[k])=1$ gives the same upper and lower bounds.
+
+
 \section*{Task 10}
 K = 5
 In the general case no due to the direction of the robot is not lined up with the point it wants to go to. 
@@ -209,9 +233,29 @@ In the general case no due to the direction of the robot is not lined up with th
 \end{figure}
 
 \section*{Task 12}
-
-Solution to the task
-
+This section is very similar to task 9 whilst we have a slightly different controller thus this will not change the poles of the controller. Again the position approximated with euler forward. 
+\begin{equation*}
+x[h]\approx x[k]+\dot{x}[k]\tau_s
+\end{equation*}
+We have $\dot{x}$ from equation (3) and control signal $u_\omega$.
+\begin{equation*}
+u_\omega [k] = K_{\omega} cos(\theta [k])(x_g - x[k])+K_{\omega}sin(\theta [k]) (y_g-y[k])
+\end{equation*}
+\begin{equation*}
+\dot{x[k]} = R u_\omega [k] cos(\theta[k])
+\end{equation*}
+\begin{equation*}
+x[k+h]\approx  (1-K_\omega\tau_sRcos^2(\theta[k]))x[k]+K_1+\Gamma y[k]
+\end{equation*}
+Where $K_1$ a constant of how $x[k+h]$ depends on $x_g, y_g$ and $\Gamma$ is how it depends on the position i y direction $y[k]$. Assuming that $y[k]$ could be considered as an input signal we have stability if the absolute value of the eigenvalues in the stability equation is less than $1$.
+\begin{equation*}
+|\lambda |=|1-K_\omega\tau_sRcos^2(\theta[k])|<1
+\end{equation*}
+This gives the the upper/lower boundary of $0<K_\omega<\frac{2}{R\tau_s}$ since the minumum upper boundary is found when $cos^2(\theta[k])=1$. This is just like the controller in task 9 but we control to a different position. \\\\
+If the controller is analysed in the y direction the following eigenvalues are obtained.
+\begin{equation*}
+|\lambda |=|1-K_\omega\tau_sRsin^2(\theta[k])|<1
+\end{equation*} And since the maximum of $sin^2(\theta[k])=cos^2(\theta[k])=1$ gives the same upper and lower bounds.
 \section*{Task 13}
 K = 30
 \begin{figure}[H]
@@ -238,7 +282,26 @@ Solution to the task
 
 \section*{Task 18}
 
-Solution to the task
+	$Q = \{Rotate,Line,Wait\}$\\
+	$X = \mathbb{R}^3$\\
+	$Init = (Rotation,(x0,y0,\theta0)$
+	\\
+	$f(Rotation,(x,y,\theta)) = (Ru_\omega*cos(\theta),Ru_\omega*sin(\theta),\frac{R}{L}u_\Psi)$\\
+	$f(Line,(x,y,\theta)) = (Ru_\omega*cos(\theta),Ru_\omega*sin(\theta),\frac{R}{L}u_\Psi)$\\
+	$f(Wait,(x,y,\theta)) = (0,0,0)$\\
+	\\
+	$D(Rotation) = \{(x,y,\theta) \epsilon \mathbb{R}, -180 < \theta <= 180\}$\\
+	$D(Line) = \{(x,y,\theta) \epsilon \mathbb{R}, -180 < \theta <= 180\}$\\
+	$D(Wait) = \{(x,y,\theta) \epsilon \mathbb{R}, -180 < \theta <= 180\}$\\
+	\\
+	$E = \{ (Rotation,line),(Line,Wait),(Line,Rotation),(Wait,Rotation)\}$\\\\
+	$G(Rotation, Line) = \{(x,y,\theta) \epsilon \mathbb{R}: |\theta^R - \theta| < a, |x0 - x| < b, |y0 -y| < c\}$\\
+	$G(Line, Rotation)=\{(x,y,\theta) \epsilon \mathbb{R}: |xg - x|<d,|yg -y|<e\}$\\\\	
+	$R((Rotation, Line), ((x,y,\theta) \epsilon \mathbb{R}))=$ 
+	$R((Line, Wait), ((x,y,\theta) \epsilon \mathbb{R}))=$\\
+	$=R((Line, Rotation), ((x,y,\theta) \epsilon \mathbb{R}))=$
+	$R((Wait, Rotation), ((x,y,\theta) \epsilon \mathbb{R}))=$\\$\{(x,y,\theta) \epsilon \mathbb{R}\}$\\
+
 
 \section*{Task 19}
 
