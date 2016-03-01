@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  29 FEB 2016 11:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  1 MAR 2016 16:25
 entering extended mode
 **homework_3_template.tex
 (homework_3_template.tex
@@ -255,22 +255,22 @@ LaTeX Font Info:    ... okay on input line 28.
 \makeMPintoPDFobject=\count111
 \everyMPtoPDFconversion=\toks26
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 41.
+LaTeX Font Info:    Try loading font information for U+msa on input line 42.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 41.
+LaTeX Font Info:    Try loading font information for U+msb on input line 42.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 58.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 59.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 59.
  [1
 
 {C:/Users/Gabriel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
@@ -279,44 +279,77 @@ File: Phase_portrait_with_regionmark.pdf Graphic file (type pdf)
 
 <use Phase_portrait_with_regionmark.pdf>
 Package pdftex.def Info: Phase_portrait_with_regionmark.pdf used on input line 
-83.
+84.
 (pdftex.def)             Requested size: 362.37569pt x 266.56393pt.
  [2 <./Phase_portrait_with_regionmark.pdf>] [3] <fig/task8.png, id=35, 526.9687
 5pt x 395.22656pt>
 File: fig/task8.png Graphic file (type png)
  <use fig/task8.png>
-Package pdftex.def Info: fig/task8.png used on input line 173.
-(pdftex.def)             Requested size: 362.37569pt x 271.79597pt.
-
-<fig/task10.png, id=36, 526.96875pt x 395.22656pt>
-File: fig/task10.png Graphic file (type png)
- <use fig/task10.png>
-Package pdftex.def Info: fig/task10.png used on input line 199.
+Package pdftex.def Info: fig/task8.png used on input line 189.
 (pdftex.def)             Requested size: 362.37569pt x 271.79597pt.
 
 [4 <./fig/task8.png (PNG copy)>]
-<fig/task11.png, id=40, 526.96875pt x 395.22656pt>
+Underfull \hbox (badness 10000) in paragraph at lines 210--213
+
+ []
+
+<fig/task10.png, id=39, 526.96875pt x 395.22656pt>
+File: fig/task10.png Graphic file (type png)
+ <use fig/task10.png>
+Package pdftex.def Info: fig/task10.png used on input line 223.
+(pdftex.def)             Requested size: 362.37569pt x 271.79597pt.
+
+[5] <fig/task11.png, id=43, 526.96875pt x 395.22656pt>
 File: fig/task11.png Graphic file (type png)
  <use fig/task11.png>
-Package pdftex.def Info: fig/task11.png used on input line 207.
+Package pdftex.def Info: fig/task11.png used on input line 231.
 (pdftex.def)             Requested size: 362.37569pt x 271.79597pt.
 
-[5 <./fig/task10.png (PNG copy)> <./fig/task11.png (PNG copy)>]
-<fig/task13.png, id=44, 526.96875pt x 395.22656pt>
+[6 <./fig/task10.png (PNG copy)> <./fig/task11.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 253--256
+
+ []
+
+<fig/task13.png, id=47, 526.96875pt x 395.22656pt>
 File: fig/task13.png Graphic file (type png)
  <use fig/task13.png>
-Package pdftex.def Info: fig/task13.png used on input line 219.
+Package pdftex.def Info: fig/task13.png used on input line 263.
 (pdftex.def)             Requested size: 362.37569pt x 271.79597pt.
 
-[6 <./fig/task13.png (PNG copy)>] [7] (homework_3_template.aux) ) 
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 285--304
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--304
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--304
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--304
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--304
+
+ []
+
+[8 <./fig/task13.png (PNG copy)>] [9] (homework_3_template.aux) ) 
 Here is how much of TeX's memory you used:
- 3431 strings out of 493673
- 44708 string characters out of 3141524
+ 3430 strings out of 493673
+ 44692 string characters out of 3141524
  116785 words of memory out of 3000000
- 6729 multiletter control sequences out of 15000+200000
+ 6728 multiletter control sequences out of 15000+200000
  12964 words of font info for 50 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,9n,28p,379b,267s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,9n,28p,398b,267s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files 
@@ -329,10 +362,11 @@ X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2
 onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmtt12.pfb>
-Output written on homework_3_template.pdf (7 pages, 236290 bytes).
+pe1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/amsfonts/symbols/msbm10.pfb>
+Output written on homework_3_template.pdf (9 pages, 249477 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
+ 101 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
