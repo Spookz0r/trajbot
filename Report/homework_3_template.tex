@@ -35,7 +35,7 @@
   \and
   Gabriel Andersson Santiago \\ 910706 \\ gabras@kth.se
   \and
-  Anders Levin \\ personnummer \\ email
+  Anders Levin \\ 910729 \\ anle@kth.se
   \and
   }
 %\date{2010-10-10}             % If you want to set the date yourself.
@@ -66,12 +66,12 @@ u_l = u_\omega - \frac{u_\Psi}{2}
 \section*{Task 2}
 
 
-Rewriting equation 3 on the following form:
+Rewriting the equations 3 from the problem formulation on the following form:
 \begin{equation}
 R = \frac{\dot{x}}{u_\omega cos \theta}
 \end{equation}
 
-yields the possibility to calculate a good estimate of the model parameter \emph{R}. Approximating the speed $\dot{x}$ and then calculating the best \emph{R} for different values of $\theta$. The same holds for the approximation of L. Equation 4 is rewritten accordingly. 
+yields the possibility to calculate a good estimate of the model parameter \emph{R}. Approximating the speed $\dot{x}$ and then calculating the best \emph{R} for different values of $\theta$. The same holds for the approximation of L. The equation for R,l is rewritten accordingly. 
 
 \begin{equation}
 L = \frac{Ru_\Psi}{\dot{\theta}}
@@ -102,7 +102,7 @@ $\dot{\theta} = R/L u_\psi$ won't be asymptotically stable due to that the outpu
 
 \section*{Task 4}
 
-The system is asymptotically stable due to that the output signal will constantly converge to the desired value. Though by doing this will quicker and quicker reactions from the controller which will not be possible in real life. The system does not exhibit Zeno behaviour since the control signal will always have a value and it does not stabilize within a finite time. 
+The system is asymptotically stable due to that the output signal will constantly converge to the desired value. Though by doing this will quicker and quicker reactions from the controller which will not be possible in real life. The system has Zeno behaviour due to infinite switches in finite time.
 
 \begin{figure}[H]
 \begin{center}	
@@ -152,11 +152,11 @@ We have $\dot{\theta}$ from equation (3) and control signal $u_\Psi$ in the assi
 \begin{equation*}
 \theta[k+h]\approx  (1-\frac{R K_\Psi \tau_s)}{L})\theta[k]+\frac{R K_\Psi \tau_s)}{L}\theta^R
 \end{equation*}
-This is stable i the absolute value of the eigenvalues are less than 1 for the $\Phi$ matrix. The eigenvalue is
+This is stable i.e the absolute value of the eigenvalues are less than 1 for the $\Phi$ matrix. The eigenvalue is
 \begin{equation*}
 \lambda = |1-\frac{R K_\Psi \tau_s)}{L}|<1
 \end{equation*}
-This gives the the upper/lower boundary of $0<K_\Psi<\frac{2L}{R\tau_s}$. 
+This gives the upper/lower boundary of $0<K_\Psi<\frac{2L}{R\tau_s}$. 
 
 \section*{Task 8}
 
@@ -206,7 +206,7 @@ In the general case no due to the direction of the robot is not lined up with th
 \end{figure}
 
 \section*{Task 11}
-With both controllers enabled we get both the right angle and keeping the same position. This is kind of dependent on the speed of the controllers that systems are in similar speeds.
+With both controllers enabled we get both the correct angle and keeping the same position. This is kind of dependent on the speed of the controllers that systems are in similar speeds.
 \begin{figure}[H]
 \begin{center}	
   \includegraphics[width = 0.8\textwidth]{task11.png}
@@ -241,7 +241,7 @@ If the controller is analysed in the y direction the following eigenvalues are o
 \section*{Task 13}
 With the control value:
 K = 30
-the performance can be seen in \ref{13}.
+the performance can be seen in Figure \ref{13}.
 \begin{figure}[H]
 \begin{center}	
   \includegraphics[width = 0.8\textwidth]{task13.png}
@@ -282,11 +282,11 @@ and therefore $0<K_\Psi<\frac{2 L }{p R \tau_s}$.
 
 \section*{Task 15}
 
-given the inequality in task 14 we get that the maximum value for the value $p$ to keep the system stable is $p<\frac{2 L }{K_\Psi R \tau_s}$ given a controller gain $K_\Psi$. Generally the higher the value set on $p$ the longer the point that is kept on the desired line between the starting point to the goal is. The optimal value seemed to be approximately $0.5$ meters given our value $K_.\Psi$.
+Given the inequality in task 14 we get that the maximum value for the value $p$ to keep the system stable is $p<\frac{2 L }{K_\Psi R \tau_s}$ given a controller gain $K_\Psi$. Generally the larger the value set on $p$ is, the more punishing a angle error becomes. The optimal value seemed to be approximately $0.5$ meters given our value $K_\Psi$.
 
 \section*{Task 16}
 
-We see in figure \ref{16} that the error goes to zero,meaning that we can maintain an exact angle with no error. This is when only rotation, completly disablig the translational controller. 
+We see in figure \ref{16} that the error goes to zero, meaning that we can maintain an exact angle with no error. This is when only rotation, completely disabling the translational controller. 
 
 
 \begin{figure}[H]
@@ -297,7 +297,7 @@ We see in figure \ref{16} that the error goes to zero,meaning that we can mainta
 \end{figure}
 
 \section*{Task 17}
-Now the error controller gets disturbed by the translational controller and vice versa. We can see the performance in figure \ref{17}.  We can see that they they differ alot.-
+Now the line following controller gets disturbed by the translational controller and vice versa. We can see the performance in figure \ref{17}.  We can see that they they differ in behaviour form the case whne ony only one controller is active at the time.
 \begin{figure}[H]
 \begin{center}	
   \includegraphics[width = 0.8\textwidth]{task17.png}
@@ -307,7 +307,7 @@ Now the error controller gets disturbed by the translational controller and vice
 
 
 \section*{Task 18}
-
+The hybrid automata can be represented as follows:
 	$Q = \{Rotate,Line,Wait\}$\\
 	$X = \mathbb{R}^3$\\
 	$Init = (Rotation,(x_0,y_0,\theta_0))$
@@ -316,9 +316,9 @@ Now the error controller gets disturbed by the translational controller and vice
 	$f(Line,(x,y,\theta)) = (Ru_\omega*cos(\theta),Ru_\omega*sin(\theta),\frac{R}{L}u_\Psi)$\\
 	$f(Wait,(x,y,\theta)) = (0,0,0)$\\
 	\\
-	$D(Rotation) = \{(x,y,\theta) \epsilon \mathbb{R}, -180 < \theta <= 180\}$\\
-	$D(Line) = \{(x,y,\theta) \epsilon \mathbb{R}, -180 < \theta <= 180\}$\\
-	$D(Wait) = \{(x,y,\theta) \epsilon \mathbb{R}, -180 < \theta <= 180\}$\\
+	$D(Rotation) = \{(x,y,\theta) \epsilon \mathbb{R}, -180 < \theta \leq 180\}$\\
+	$D(Line) = \{(x,y,\theta) \epsilon \mathbb{R}, -180 < \theta \leq 180\}$\\
+	$D(Wait) = \{(x,y,\theta) \epsilon \mathbb{R}, -180 < \theta \leq 180\}$\\
 	\\
 	$E = \{ (Rotation,line),(Line,Wait),(Line,Rotation),(Wait,Rotation)\}$\\\\
 	$G(Rotation, Line) = \{(x,y,\theta) \epsilon \mathbb{R}: |\theta^R - \theta| < a, |x_0 - x| < b, |y_0 -y| < c\}$\\
@@ -327,20 +327,22 @@ Now the error controller gets disturbed by the translational controller and vice
 	$R((Line, Wait), ((x,y,\theta) \epsilon \mathbb{R}))=$\\
 	$=R((Line, Rotation), ((x,y,\theta) \epsilon \mathbb{R}))=$
 	$R((Wait, Rotation), ((x,y,\theta) \epsilon \mathbb{R}))=$\\$\{(x,y,\theta) \epsilon \mathbb{R}\}$\\
+	
+the same model as ain figure \ref{state}.
 \begin{figure}[H]
 \begin{center}	
-  \includegraphics[width = 1\textwidth]{statechart.png}
+  \includegraphics[width = 0.81\textwidth]{statechart.png}
   \caption{Statechart of the hybrid controller with guards}\label{state}
  \end{center}
 \end{figure}
 
 \section*{Task 19}
 
-The state changes when we fulfil the guards in the state machine.  When we are in the zero state only the angel changes, while $x$ and $y$ errors remains constant. while in state one both $x$, $y$ and $\theta$ error changes with time. We never reach the state two in this simulation, probably because our guards are a bit harsh or not letting the robot settle. If we would reach state two neither position or angle would change. But we can see the effect off the guard when changing form state zero to state one, one theta is less than $\pm$5 degrees (and the robots position is close to the initial position) the state changes to state one.
+The state changes when we fulfil the guards in the state machine. When we are in the zero state only the angle changes, while $x$ and $y$ errors remains constant, while in state one both $x$, $y$ and $\theta$ error changes with time. We never reach the state two in this simulation, probably because our guards are a bit harsh or not letting the robot settle. If we would reach state two neither position or angle would change. But we can see the effect of the guard when changing form state zero to state one, once $\theta$ is less than $\pm$5 degrees (and the robots position is close to the initial position) the state changes to state one.
 
 \begin{figure}[H]
 \begin{center}	
-  \includegraphics[width = 0.8\textwidth]{task19b.png}
+  \includegraphics[width=1.2\textwidth]{task19b.png}
   \caption{Plot of errors and state trajectories when the full hybrid controller is running.}\label{19}
  \end{center}
 \end{figure}
@@ -381,30 +383,5 @@ The path of the robot compared to the simulation with the same controllers can b
 % The bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\bibliography{Bibliography_template} %Read the bibliography from a separate file
-
-\begin{thebibliography}{99}
-\bibitem[Khalil(2002)]{Khalil:2002:Nonlinear-systems:vh}
-Hassan~K Khalil.
-\newblock \emph{Nonlinear systems}.
-\newblock Prentice Hall, Upper Saddle river, 3. edition, 2002.
-\newblock ISBN 0-13-067389-7.
-
-\bibitem[Oetiker et~al.(2008)Oetiker, Partl, Hyna, and
-  Schlegl]{Oetiker:2008:TheNotSoShortIntroductiontoLaTeXe}
-Tobias Oetiker, Hubert Partl, Irene Hyna, and Elisabeth Schlegl.
-\newblock \emph{The Not So Short Introduction to \LaTeXe}.
-\newblock Oetiker, OETIKER+PARTNER AG, Aarweg 15, 4600 Olten, Switzerland,
-  2008.
-\newblock http://www.ctan.org/info/lshort/.
-
-\bibitem[Sastry(1999)]{Sastry:1999:Nonlinear-systems:-analysis-stability-and-c%
-ontrol:xr}
-Shankar Sastry.
-\newblock \emph{Nonlinear systems: analysis, stability, and control},
-  volume~10.
-\newblock Springer, New York, N.Y., 1999.
-\newblock ISBN 0-387-98513-1.
-\end{thebibliography}
-
 
 \end{document}      % End of the document
