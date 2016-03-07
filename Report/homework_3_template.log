@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  7 MAR 2016 13:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  7 MAR 2016 13:45
 entering extended mode
 **homework_3_template.tex
 (homework_3_template.tex
@@ -265,31 +265,120 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 43.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/Gabriel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
-Runaway argument?
-{. Approximating the speed $\dot {x}$ and then calculating the best \emph \ETC.
-! File ended while scanning use of \emph .
-<inserted text> 
-                \par 
-<*> homework_3_template.tex
-                           
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
+{C:/Users/Gabriel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<fig/rot1.png, id=7, 1297.84875pt x 734.745pt>
+File: fig/rot1.png Graphic file (type png)
+ <use fig/rot1.png>
+Package pdftex.def Info: fig/rot1.png used on input line 96.
+(pdftex.def)             Requested size: 271.7835pt x 153.85254pt.
+ [2 <./fig/rot1.png>] <fig/rot2.png, id=20, 1358.82657pt x 662.475pt>
+File: fig/rot2.png Graphic file (type png)
+ <use fig/rot2.png>
+Package pdftex.def Info: fig/rot2.png used on input line 109.
+(pdftex.def)             Requested size: 362.37569pt x 176.66698pt.
 
-! Emergency stop.
-<*> homework_3_template.tex
-                           
-*** (job aborted, no legal \end found)
+<fig/rot3.png, id=21, 1358.82657pt x 662.475pt>
+File: fig/rot3.png Graphic file (type png)
+ <use fig/rot3.png>
+Package pdftex.def Info: fig/rot3.png used on input line 120.
+(pdftex.def)             Requested size: 362.37569pt x 176.66698pt.
+ [3 <./fig/rot2.png (PNG copy)> <./fig/rot3.png (PNG copy)>]
+<fig/task8.png, id=25, 526.96875pt x 395.22656pt>
+File: fig/task8.png Graphic file (type png)
+ <use fig/task8.png>
+Package pdftex.def Info: fig/task8.png used on input line 168.
+(pdftex.def)             Requested size: 362.37569pt x 271.79597pt.
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 191--194
 
- 
+ []
+
+<fig/task10.png, id=29, 526.96875pt x 395.22656pt>
+File: fig/task10.png Graphic file (type png)
+ <use fig/task10.png>
+Package pdftex.def Info: fig/task10.png used on input line 204.
+(pdftex.def)             Requested size: 362.37569pt x 271.79597pt.
+
+[5 <./fig/task8.png (PNG copy)>]
+<fig/task11.png, id=33, 526.96875pt x 395.22656pt>
+File: fig/task11.png Graphic file (type png)
+ <use fig/task11.png>
+Package pdftex.def Info: fig/task11.png used on input line 212.
+(pdftex.def)             Requested size: 362.37569pt x 271.79597pt.
+
+[6 <./fig/task10.png (PNG copy)> <./fig/task11.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 234--237
+
+ []
+
+<fig/task13.png, id=37, 526.96875pt x 395.22656pt>
+File: fig/task13.png Graphic file (type png)
+ <use fig/task13.png>
+Package pdftex.def Info: fig/task13.png used on input line 246.
+(pdftex.def)             Requested size: 362.37569pt x 271.79597pt.
+
+[7] [8 <./fig/task13.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 296--315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--315
+
+ []
+
+[9] <fig/task22.png, id=49, 756.57657pt x 317.68687pt>
+File: fig/task22.png Graphic file (type png)
+ <use fig/task22.png>
+Package pdftex.def Info: fig/task22.png used on input line 335.
+(pdftex.def)             Requested size: 378.28735pt x 158.84303pt.
+
+<fig/task22angle.png, id=50, 878.53218pt x 399.74344pt>
+File: fig/task22angle.png Graphic file (type png)
+
+<use fig/task22angle.png>
+Package pdftex.def Info: fig/task22angle.png used on input line 344.
+(pdftex.def)             Requested size: 439.26501pt x 199.87122pt.
+ [10 <./fig/task22.png (PNG copy)> <./fig/task22angle.png (PNG copy)>] [11] (ho
+mework_3_template.aux) ) 
 Here is how much of TeX's memory you used:
- 3362 strings out of 493673
- 43310 string characters out of 3141524
- 112779 words of memory out of 3000000
- 6675 multiletter control sequences out of 15000+200000
- 11789 words of font info for 46 fonts, out of 3000000 for 9000
+ 3430 strings out of 493673
+ 44598 string characters out of 3141524
+ 115779 words of memory out of 3000000
+ 6728 multiletter control sequences out of 15000+200000
+ 12488 words of font info for 48 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,6n,28p,398b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 27i,6n,28p,398b,267s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+
+Output written on homework_3_template.pdf (11 pages, 393713 bytes).
+PDF statistics:
+ 93 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+
