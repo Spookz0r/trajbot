@@ -65,22 +65,24 @@ u_l = u_\omega - \frac{u_\Psi}{2}
 
 \section*{Task 2}
 
-By calculating the mean value of $\dot{x}$ from the data in \emph{Forward.cvs} \emph{R} could be estimated with equation \eqref{xdot}
+
+Rewriting equation 3 on the following form:
 \begin{equation}
-\dot{x} = R*u_\omega*cos(\theta) \label{xdot}
+R = \frac{\dot{x}}{u_\omega cos \theta}
 \end{equation}
-\\
-By calculating the mean value of $\dot{\theta}$ from the data in \emph{Rotate.cvs} \emph{L} could be estimated with equation \eqref{thetadot}
+
+yields the possibility to calculate a good estimate of the model parameter \emph{. Approximating the speed $\dot{x}$ and then calculating the best \emph{R} for different values of $\theta$. The same holds for the approximation of L. Equation X is rewritten accordingly. 
+
 \begin{equation}
-\dot{\theta} = \frac{R}{L}u_\Psi\label{thetadot}
+L = \frac{Ru_\Psi}{\dot{\theta}}
 \end{equation}
-\\
-The estimated values are
+
+The rotational speed $\dot{\theta}$ is approximated from the obtained data and \emph{L} is then calculated in the same say as \emph{R}. The calculated values of \emph{R} and \emph{L} are presented in Table 1 below. 
 \begin{center}
 	\begin{tabular}{| c | c |}
 	\hline
 	R & L \\ \hline
-	111 & 111 \\ \hline
+	0.0010085 & 0.0050935 \\ \hline
 	
 	\end{tabular}
 \end{center}
@@ -236,7 +238,9 @@ If the controller is analysed in the y direction the following eigenvalues are o
 |\lambda |=|1-K_\omega\tau_sRsin^2(\theta[k])|<1
 \end{equation*} And since the maximum of $sin^2(\theta[k])=cos^2(\theta[k])=1$ gives the same upper and lower bounds.
 \section*{Task 13}
+With the control value:
 K = 30
+the performance can be seen in figure 5.
 \begin{figure}[H]
 \begin{center}	
   \includegraphics[width = 0.8\textwidth]{task13.png}
@@ -244,6 +248,7 @@ K = 30
  \end{center}
 \end{figure}
 
+It is not possible to arrive at $x_g$ $y_g$ exactly, mainly because the performance depends on the aim by the rotational controllers, both before and during travel.
 \section*{Task 14}
 
 
@@ -257,16 +262,21 @@ We have $\dot{\theta}$ from equation (3) and control signal $u_\Psi$ in the assi
 \end{equation*}
 
 \begin{equation*}
-\theta[k+h]\approx  (1-\frac{p R K_\Psi \tau_s)}{L})\theta[k]+\frac{R K_\Psi \tau_s)}{L}\theta_g
+\theta[k+h]\approx  (1-\frac{p R K_\Psi \tau_s}{L})\theta[k]+\frac{R K_\Psi \tau_s}{L}\theta_g
 \end{equation*}
 This is stable i the absolute value of the eigenvalues are less than 1 for the $\Phi$ matrix. The eigenvalue is
 \begin{equation*}
-\lambda = |1-\frac{p R K_\Psi \tau_s)}{L}|<1
+\lambda = |1-\frac{p R K_\Psi \tau_s}{L}|<1
 \end{equation*}
 This gives the the upper/lower boundary of $K_\Psi$ due to.
 \begin{equation*}
-\frac{p R K_\Psi \tau_s)<0
+\frac{p R K_\Psi \tau_s}{L}>0
 \end{equation*}
+and
+\begin{equation*}
+\frac{p R K_\Psi \tau_s}{L}<2
+\end{equation*}
+and therefore $0<K_\Psi<\frac{2 p R \tau_s }{L}$.
 
 
 \section*{Task 15}
