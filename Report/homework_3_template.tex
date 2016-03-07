@@ -197,19 +197,20 @@ If the controller is analysed in the y direction the following eigenvalues are o
 
 
 \section*{Task 10}
-K = 5
 In the general case no due to the direction of the robot is not lined up with the point it wants to go to. 
 \begin{figure}[H]
 \begin{center}	
   \includegraphics[width = 0.8\textwidth]{task10.png}
+  \caption{Controller performance for translational movement where the desired point is directly in front of the robot}
  \end{center}
 \end{figure}
 
 \section*{Task 11}
-
+With both controllers enabled we get both the right angle and keeping the same position. This is kind of dependent on the speed of the controllers that systems are in similar speeds.
 \begin{figure}[H]
 \begin{center}	
   \includegraphics[width = 0.8\textwidth]{task11.png}
+  \caption{We see that the control signal to the transient controller is zero during the time of the plot as well as the desired $\theta$ is achieved.}
  \end{center}
 \end{figure}
 
@@ -240,15 +241,15 @@ If the controller is analysed in the y direction the following eigenvalues are o
 \section*{Task 13}
 With the control value:
 K = 30
-the performance can be seen in figure 5.
+the performance can be seen in \ref{13}.
 \begin{figure}[H]
 \begin{center}	
   \includegraphics[width = 0.8\textwidth]{task13.png}
-  \caption{Controller performance}
+  \caption{Controller performance for translational movement}\label{13}
  \end{center}
 \end{figure}
 
-It is not possible to arrive at $x_g$ $y_g$ exactly, mainly because the performance depends on the aim by the rotational controllers, both before and during travel.
+It is not possible to arrive at $x_g$ $y_g$ exactly, mainly because the performance depends on the aim by the rotational controllers, both before and during travel. 
 \section*{Task 14}
 
 
@@ -276,26 +277,40 @@ and
 \begin{equation*}
 \frac{p R K_\Psi \tau_s}{L}<2
 \end{equation*}
-and therefore $0<K_\Psi<\frac{2 p R \tau_s }{L}$.
+and therefore $0<K_\Psi<\frac{2 L }{p R \tau_s}$.
 
 
 \section*{Task 15}
 
-Solution to the task
+given the inequality in task 14 we get that the maximum value for the value $p$ to keep the system stable is $p<\frac{2 L }{K_\Psi R \tau_s}$ given a controller gain $K_\Psi$. Generally the higher the value set on $p$ the longer the point that is kept on the desired line between the starting point to the goal is. The optimal value seemed to be approximately $0.5$ meters given our value $K_.\Psi$.
 
 \section*{Task 16}
 
-Solution to the task
+We see in figure \ref{16} that the error goes to zero,meaning that we can maintain an exact angle with no error. This is when only rotation, completly disablig the translational controller. 
+
+
+\begin{figure}[H]
+\begin{center}	
+  \includegraphics[width = 0.8\textwidth]{task16.png}
+  \caption{Plot of $d_p$ staying at 0}\label{16}
+ \end{center}
+\end{figure}
 
 \section*{Task 17}
+Now the error controller gets disturbed by the translational controller and vice versa. We can see the performance in figure \ref{17}.  We can see that they they differ alot.-
+\begin{figure}[H]
+\begin{center}	
+  \includegraphics[width = 0.8\textwidth]{task17.png}
+  \caption{Plot of  $p_d$ and $p_g$ when desired point is directly ahead of the robot}\label{17}
+ \end{center}
+\end{figure}
 
-Solution to the task
 
 \section*{Task 18}
 
 	$Q = \{Rotate,Line,Wait\}$\\
 	$X = \mathbb{R}^3$\\
-	$Init = (Rotation,(x0,y0,\theta0)$
+	$Init = (Rotation,(x_0,y_0,\theta_0))$
 	\\
 	$f(Rotation,(x,y,\theta)) = (Ru_\omega*cos(\theta),Ru_\omega*sin(\theta),\frac{R}{L}u_\Psi)$\\
 	$f(Line,(x,y,\theta)) = (Ru_\omega*cos(\theta),Ru_\omega*sin(\theta),\frac{R}{L}u_\Psi)$\\
@@ -306,17 +321,29 @@ Solution to the task
 	$D(Wait) = \{(x,y,\theta) \epsilon \mathbb{R}, -180 < \theta <= 180\}$\\
 	\\
 	$E = \{ (Rotation,line),(Line,Wait),(Line,Rotation),(Wait,Rotation)\}$\\\\
-	$G(Rotation, Line) = \{(x,y,\theta) \epsilon \mathbb{R}: |\theta^R - \theta| < a, |x0 - x| < b, |y0 -y| < c\}$\\
-	$G(Line, Rotation)=\{(x,y,\theta) \epsilon \mathbb{R}: |xg - x|<d,|yg -y|<e\}$\\\\	
+	$G(Rotation, Line) = \{(x,y,\theta) \epsilon \mathbb{R}: |\theta^R - \theta| < a, |x_0 - x| < b, |y_0 -y| < c\}$\\
+	$G(Line, Rotation)=\{(x,y,\theta) \epsilon \mathbb{R}: |x_g - x|<d,|y_g -y|<e\}$\\\\	
 	$R((Rotation, Line), ((x,y,\theta) \epsilon \mathbb{R}))=$ 
 	$R((Line, Wait), ((x,y,\theta) \epsilon \mathbb{R}))=$\\
 	$=R((Line, Rotation), ((x,y,\theta) \epsilon \mathbb{R}))=$
 	$R((Wait, Rotation), ((x,y,\theta) \epsilon \mathbb{R}))=$\\$\{(x,y,\theta) \epsilon \mathbb{R}\}$\\
-
+\begin{figure}[H]
+\begin{center}	
+  \includegraphics[width = 1\textwidth]{statechart.png}
+  \caption{Statechart of the hybrid controller with guards}\label{state}
+ \end{center}
+\end{figure}
 
 \section*{Task 19}
 
-Solution to the task
+The state changes when we fulfil the guards in the state machine.  When we are in the zero state only the angel changes, while $x$ and $y$ errors remains constant. while in state one both $x$, $y$ and $\theta$ error changes with time. We never reach the state two in this simulation, probably because our guards are a bit harsh or not letting the robot settle. If we would reach state two neither position or angle would change. But we can see the effect off the guard when changing form state zero to state one, one theta is less than $\pm$5 degrees (and the robots position is close to the initial position) the state changes to state one.
+
+\begin{figure}[H]
+\begin{center}	
+  \includegraphics[width = 0.8\textwidth]{task19b.png}
+  \caption{Plot of errors and state trajectories when the full hybrid controller is running.}\label{19}
+ \end{center}
+\end{figure}
 
 \section*{Task 20}
 
@@ -328,7 +355,7 @@ It was pretty hard to reach the exact point manually. This was probably due to t
 
 \section*{Task 22}
 
-The path of the robot compared to the simulation with the same controllers can be seen in Figure \ref{compare}.
+The path of the robot compared to the simulation with the same controllers can be seen in Figure \ref{compare}. This is due to many reasons, here are a few: The smallest input given by our controllers might not be able to move the robot thus not having any effect. This might further be disturbed by static friction in the wheels and the robot battery charge level. The motion capture seem very accurate but might still cause some errors int both positioning and angle perception. We can see in figure \ref{compare} that the aiming in state zero is not ass good as in our simulations thus making the robot more reliant on the state one controllers the manage to achieve its goal state. 
 
 \begin{figure}[H]
 	\begin{center}
