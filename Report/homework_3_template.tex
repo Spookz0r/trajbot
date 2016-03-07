@@ -54,6 +54,8 @@
 
 \section*{Task 1}
 
+By using the formulas given the following equations were derived.
+
 \begin{equation}
 u_r = \frac{2^{u_{\omega} + u_{\psi}}}{2} = u_w + \frac{u_{Psi}}{2}
 \end{equation}
@@ -85,17 +87,39 @@ The estimated values are
 
 \section*{Task 3}
 
-$\dot{\theta} = R/L u_\psi$ won't be asymptotically stable due to that the output signal will oscillate with constant amplitude after a set time. It will not have Zeno behaviour due there is no finite time limit when the ouutput signal is stable. 
+$\dot{\theta} = R/L u_\psi$ won't be asymptotically stable due to that the output signal will oscillate with constant amplitude after a set time. It will not have Zeno behaviour due there is no finite time limit when the output signal is stable. 
+
+\begin{figure}[H]
+\begin{center}	
+  \includegraphics[width = 0.6\textwidth]{rot1.png}
+  \caption{Performance of the controller}
+  
+ \end{center}
+\end{figure}
 
 
 \section*{Task 4}
 
 The system is asymptotically stable due to that the output signal will constantly converge to the desired value. Though by doing this will quicker and quicker reactions from the controller which will not be possible in real life. The system does not exhibit Zeno behaviour since the control signal will always have a value and it does not stabilize within a finite time. 
 
-
+\begin{figure}[H]
+\begin{center}	
+  \includegraphics[width = 0.8\textwidth]{rot2.png}
+  \caption{Performance of the controller}
+  
+ \end{center}
+\end{figure}
 \section*{Task 5}
 
 The system is stable but not asymptotically stable and therefore does also not exhibit Zeno behaviour. We see that the system is not asymptotically stable due to that the output signal does not converge to the desired value but will oscillate with a constant amplitude after infinite time.
+
+\begin{figure}[H]
+\begin{center}	
+  \includegraphics[width = 0.8\textwidth]{rot3.png}
+  \caption{Performance of the controller}
+  
+ \end{center}
+\end{figure}
 \section*{Task 6}
 
 The discretized system can be seen in Equations \eqref{dXdot},\eqref{dYdot} and\eqref{dPdot}
@@ -222,7 +246,28 @@ K = 30
 
 \section*{Task 14}
 
-Solution to the task
+
+With euler forward method we have that
+\begin{equation*}
+\theta[h]\approx \theta[k]+\dot{\theta}[k]\tau_s
+\end{equation*}
+We have $\dot{\theta}$ from equation (3) and control signal $u_\Psi$ in the assignment. This give the following equation for the system.
+\begin{equation*}
+\theta[k+h]\approx  \frac{p R K_\Psi \tau_s(\theta_g-\theta[k])}{L}+\theta[k]
+\end{equation*}
+
+\begin{equation*}
+\theta[k+h]\approx  (1-\frac{p R K_\Psi \tau_s)}{L})\theta[k]+\frac{R K_\Psi \tau_s)}{L}\theta_g
+\end{equation*}
+This is stable i the absolute value of the eigenvalues are less than 1 for the $\Phi$ matrix. The eigenvalue is
+\begin{equation*}
+\lambda = |1-\frac{p R K_\Psi \tau_s)}{L}|<1
+\end{equation*}
+This gives the the upper/lower boundary of $K_\Psi$ due to.
+\begin{equation*}
+\frac{p R K_\Psi \tau_s)<0
+\end{equation*}
+
 
 \section*{Task 15}
 
